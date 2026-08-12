@@ -3,21 +3,23 @@
 <div align="center">
 
 # 📝 Prueba Práctica — Unidad IV
+
 ### Validación, Gestión, Herramientas y Estándares de Requisitos
-**Ingeniería de Requisitos (ISR-401) — Evaluación Individual en Clase**
+
+**Ingeniería de Requisitos (ISR-401)**
+**Evaluación individual en clase**
 
 </div>
 
 ---
 
-
-# 🔗 Acceso rápido
+## 🔗 Acceso rápido
 
 <div align="center">
 
-### 📂 Repositorio
+### 📂 Repositorio público
 
-👉 **https://github.com/ptigasis-Alexander/Pruba_Practica_UND4_Tigasi_Sampedro**
+👉 **[Pruba_Practica_UND4_Tigasi_Sampedro](https://github.com/ptigasis-Alexander/Pruba_Practica_UND4_Tigasi_Sampedro)**
 
 ### 📄 Documento PDF
 
@@ -33,119 +35,352 @@
 
 </div>
 
-Repositorio **público**, con el documento fuente en LaTeX, el PDF compilado y las imágenes/capturas de respaldo del intento rendido en el SGA.
+---
+
+## 📌 Descripción
+
+Este repositorio contiene el desarrollo de la **Prueba Práctica de la Unidad IV** de la asignatura **Ingeniería de Requisitos (ISR-401)**, realizada individualmente a partir del caso:
+
+> **Sistema de Gestión de Pedidos**
+
+El trabajo comprende el modelado de datos, funciones y comportamiento del sistema, así como la especificación, priorización, validación, trazabilidad, gestión del cambio y configuración de requisitos.
+
+También se incluyen las capturas del resumen y del intento del cuestionario realizado en el SGA, los diagramas UML y las hojas manuscritas utilizadas como evidencia.
 
 ---
 
-## 📖 Qué contiene esta evaluación
+## 👤 Información académica
 
-Prueba práctica individual, en clase, de 120 minutos, sobre el caso **"Sistema de Gestión de Pedidos"**. Cubre las tres perspectivas de modelado y su validación:
-
-| Punto | Contenido |
-|---|---|
-| P1 | Diagrama de clases UML (Cliente, Pedido, LíneaPedido, Producto) |
-| P2 | Diagrama de actividades — proceso "Registrar pedido" |
-| P3 | Máquina de estados (Registrado → Confirmado → Enviado → Entregado / Cancelado) |
-| P4 | Matriz de consistencia entre P1–P2–P3 |
-| P5 | Especificación de requisitos (RF1, RF2, RNF1, RNF2) con esquema de atributos |
-| P6 | Priorización MoSCoW |
-| P7 | Validación por inspección (ISO/IEC/IEEE 29148) + retrabajo de RNF2 |
-| P8 | Pruebas de aceptación trazadas (PA1–PA4) |
-| P9 | Matriz de trazabilidad |
-| P10 | Gestión del cambio (SC-1) y línea base |
-
-Incluye además las capturas de pantalla del resumen y del intento del cuestionario rendido en el SGA, embebidas en la carátula del PDF como evidencia.
+| Dato          | Información                            |
+| ------------- | -------------------------------------- |
+| Universidad   | Universidad Técnica Estatal de Quevedo |
+| Facultad      | Facultad de Ciencias de la Ingeniería  |
+| Carrera       | Ingeniería de Software                 |
+| Asignatura    | Ingeniería de Requisitos (ISR-401)     |
+| Docente       | Ing. Gleiston Guerrero, Mg.            |
+| Estudiante    | Tigasi Sampedro Paúl Alexander         |
+| Modalidad     | Individual, en clase                   |
+| Duración      | 120 minutos                            |
+| Fecha         | 11 de agosto de 2026                   |
+| Caso práctico | Sistema de Gestión de Pedidos          |
 
 ---
 
-## 📂 Archivos de este repositorio
+## 📖 Contenido de la evaluación
 
-| Archivo | Función |
-|---|---|
-| `EvaluacionUnidad4.tex` | Documento fuente LaTeX (carátula, P1–P10, anexos) |
-| `EvaluacionUnidad4.pdf` | PDF ya compilado, listo para revisión/entrega |
-| `referenciasEV4.bib` | Bibliografía (ISO/IEC/IEEE 29148, ISO/IEC 25010, Fagan, Pohl, SWEBOK, OMG UML) |
-| `Imagenes_DCF_IR_LATEX/` | Capturas del SGA y escaneos de los diagramas manuscritos originales |
-| `README.md` | Este documento |
+| Punto   | Actividad desarrollada                                                  |
+| ------- | ----------------------------------------------------------------------- |
+| **P1**  | Diagrama de clases UML con Cliente, Pedido, LíneaPedido y Producto      |
+| **P2**  | Diagrama de actividades del proceso “Registrar pedido”                  |
+| **P3**  | Máquina de estados del ciclo de vida de un pedido                       |
+| **P4**  | Tabla de consistencia entre los modelos P1, P2 y P3                     |
+| **P5**  | Especificación de dos requisitos funcionales y dos no funcionales       |
+| **P6**  | Priorización de los requisitos mediante MoSCoW                          |
+| **P7**  | Validación por inspección basada en ISO/IEC/IEEE 29148                  |
+| **P8**  | Cuatro pruebas de aceptación trazadas a los requisitos                  |
+| **P9**  | Matriz de trazabilidad hacia atrás, hacia adelante y horizontal         |
+| **P10** | Solicitud de cambio, análisis de impacto, decisión del CCB y línea base |
 
 ---
 
-## ⚙️ Cómo compilar el documento
+## 📂 Estructura del repositorio
 
-El `.tex` usa `fontspec` y `tikz`, por lo que **requiere XeLaTeX o LuaLaTeX** (no compila con pdfLaTeX clásico). La bibliografía usa `natbib` + `bibtex`.
-
-### Opción A — Overleaf (recomendada, sin instalar nada)
-
-1. Crea un proyecto nuevo → **Upload Project** y sube el `.zip` del repositorio (o los archivos `EvaluacionUnidad4.tex`, `referenciasEV4.bib` y la carpeta `Imagenes_DCF_IR_LATEX/` con su contenido).
-2. En **Menu → Compiler**, selecciona **XeLaTeX**.
-3. Compila (▶). Overleaf ejecuta automáticamente el ciclo LaTeX → BibTeX → LaTeX → LaTeX necesario para que salgan bien el índice y las citas.
-
-### Opción B — Local (TeX Live / MiKTeX)
-
-```bash
-# 1. Compilación inicial (genera el .aux con las citas pendientes)
-xelatex EvaluacionUnidad4.tex
-
-# 2. Procesa la bibliografía
-bibtex EvaluacionUnidad4
-
-# 3-4. Dos pasadas más para resolver referencias cruzadas, TOC y citas
-xelatex EvaluacionUnidad4.tex
-xelatex EvaluacionUnidad4.tex
+```text
+Pruba_Practica_UND4_Tigasi_Sampedro/
+│
+├── EvaluacionUnidad4.tex
+├── EvaluacionUnidad4.pdf
+├── referenciasEV4.bib
+├── README.md
+│
+└── Imagenes_DCF_IR_LATEX/
+    ├── ResumenCuestionarioSGA.png
+    ├── CuestionarioSGA1.png
+    ├── CuestionarioSGA2.png
+    ├── CuestionarioSGA3.png
+    ├── CuestionarioSGA4.png
+    ├── CuestionarioSGA5.png
+    ├── CuestionarioSGA6.png
+    ├── CuestionarioSGA7.png
+    ├── DiagramaClase.png
+    ├── diagramaActividad.png
+    ├── DiagramaMaquina.png
+    ├── DiagrmaMaquinaEstadoCorregido.png
+    ├── Hoja1.png
+    ├── Hoja2.png
+    ├── Hoja3.png
+    ├── Hoja4.png
+    ├── Hoja5.png
+    └── imagenes_README.md
 ```
 
-Requisitos previos: distribución LaTeX completa (TeX Live `full` o MiKTeX) con los paquetes `fontspec`, `tikz`, `natbib`, `booktabs`, `longtable`, `tabularx`, `fancyhdr`, `titlesec`, `enumitem`, `parskip`, `hyperref`.
+---
 
-> **Nota:** las imágenes deben estar en `Imagenes_DCF_IR_LATEX/` con el nombre exacto (`ResumenCuestionarioSGA.png`, `CuestionarioSGA1.png`…`7.png`, `DiagramaClase.png`, `diagramaActividad.png`, `DiagramaMaquina.png`, `DiagrmaMaquinaEstadoCorregido.png`, `Hoja1.png`…`Hoja5.png`). Si falta alguna, el documento compila igual y muestra un recuadro "Imagen no encontrada" en su lugar, gracias al comando `\scanfig`.
+## 📄 Función de los archivos
+
+| Archivo o carpeta        | Función                                              |
+| ------------------------ | ---------------------------------------------------- |
+| `EvaluacionUnidad4.tex`  | Archivo principal con el código fuente LaTeX         |
+| `EvaluacionUnidad4.pdf`  | Documento final compilado y listo para revisión      |
+| `referenciasEV4.bib`     | Referencias bibliográficas utilizadas                |
+| `Imagenes_DCF_IR_LATEX/` | Capturas del SGA, diagramas y evidencias manuscritas |
+| `README.md`              | Descripción e instrucciones exactas de compilación   |
 
 ---
 
-## 🧪 Cómo verificar que compiló bien
+## ⚙️ Instrucciones de compilación
 
-- El PDF debe tener **portada + índice + 10 secciones (P1–P10) + Marco normativo + Anexos**, sin páginas en blanco inesperadas ni recuadros de "Imagen no encontrada".
-- Revisa las citas bibliográficas del texto: deben verse como números entre corchetes (por ejemplo, 1). Si en su lugar aparecen signos de interrogación entre corchetes, falta correr bibtex o falta una pasada extra de xelatex.
-- Confirma que el repositorio responde en GitHub:
-  ```bash
-  curl -I https://github.com/ptigasis-Alexander/Pruba_Practica_UND4_Tigasi_Sampedro
-  ```
-  Debe devolver `HTTP/2 200`.
+### Archivo principal
+
+El archivo principal que debe compilarse es:
+
+```text
+EvaluacionUnidad4.tex
+```
+
+### Compilador requerido
+
+El documento está configurado para compilarse con:
+
+```text
+pdfLaTeX
+```
+
+La bibliografía se procesa mediante **BibTeX** y el paquete `natbib`.
 
 ---
+
+## ☁️ Opción A — Compilación en Overleaf
+
+1. Descargue el repositorio desde GitHub mediante **Code → Download ZIP**.
+2. Ingrese a Overleaf.
+3. Seleccione **New Project → Upload Project**.
+4. Suba el archivo `.zip` descargado.
+5. Abra la opción **Menu**.
+6. En **Main document**, seleccione `EvaluacionUnidad4.tex`.
+7. En **Compiler**, seleccione **pdfLaTeX**.
+8. Presione **Recompile**.
+9. Verifique que el PDF se genere sin errores.
+
+Overleaf realizará las pasadas necesarias para procesar el índice, las referencias cruzadas, las citas y la bibliografía.
+
 ---
 
-## 🔒 Guía para guardar el trabajo de forma segura
+## 💻 Opción B — Compilación local
 
-1. **Compila y revisa el PDF antes de subirlo** — no subas un PDF a medio generar ni con errores de citas.
-2. **Sube siempre el `.tex` fuente junto al `.pdf`**, no solo el PDF: así puedes recompilar si necesitas corregir algo después.
-3. **No borres `Imagenes_DCF_IR_LATEX/`** — sin esas imágenes el documento no vuelve a compilar igual (las capturas del SGA son evidencia y no se pueden regenerar).
-4. **Evita subir archivos auxiliares** (`.aux`, `.log`, `.out`, `.toc`, `.bbl`, `.blg`) al repositorio; agrégalos a un `.gitignore` para mantenerlo limpio:
-   ```
-   *.aux
-   *.log
-   *.out
-   *.toc
-   *.bbl
-   *.blg
-   *.fls
-   *.fdb_latexmk
-   *.synctex.gz
-   ```
-5. **Haz commit inmediatamente después de rendir el cuestionario en el SGA**, con las capturas ya incluidas, para que quede un respaldo con fecha verificable antes de la entrega.
-6. **Guarda una copia local del PDF final** (fuera del repositorio, p. ej. en tu Drive) por si hay problemas de acceso a GitHub al momento de la revisión.
+Para compilar el proyecto localmente se necesita una distribución LaTeX completa, como **TeX Live** o **MiKTeX**.
+
+Abra una terminal dentro de la carpeta principal del repositorio y ejecute los siguientes comandos, respetando el orden:
+
+```bash
+pdflatex EvaluacionUnidad4.tex
+bibtex EvaluacionUnidad4
+pdflatex EvaluacionUnidad4.tex
+pdflatex EvaluacionUnidad4.tex
+```
+
+### Explicación del orden
+
+1. La primera ejecución de `pdflatex` genera los archivos auxiliares y detecta las citas.
+2. `bibtex` procesa las referencias contenidas en `referenciasEV4.bib`.
+3. La segunda ejecución de `pdflatex` incorpora la bibliografía.
+4. La última ejecución actualiza el índice, la numeración y las referencias cruzadas.
+
+El archivo generado será:
+
+```text
+EvaluacionUnidad4.pdf
+```
+
+---
+
+## 📦 Dependencias
+
+El proyecto utiliza los siguientes paquetes de LaTeX:
+
+* `inputenc`
+* `fontenc`
+* `babel`
+* `float`
+* `geometry`
+* `amsmath`
+* `amssymb`
+* `xcolor`
+* `longtable`
+* `booktabs`
+* `array`
+* `calc`
+* `graphicx`
+* `hyperref`
+* `fancyhdr`
+* `titlesec`
+* `enumitem`
+* `parskip`
+* `caption`
+* `tabularx`
+* `tikz`
+* `natbib`
+
+También se utilizan las siguientes bibliotecas de TikZ:
+
+```text
+shapes
+arrows.meta
+positioning
+calc
+fit
+```
+
+Se recomienda utilizar una instalación completa de TeX Live o MiKTeX para evitar errores por dependencias faltantes.
+
+---
+
+## 🖼️ Requisitos de las imágenes
+
+La siguiente carpeta debe conservarse en la misma ubicación que el archivo principal:
+
+```text
+Imagenes_DCF_IR_LATEX/
+```
+
+Los nombres de las imágenes deben mantenerse exactamente como aparecen en el repositorio, respetando mayúsculas, minúsculas y extensiones.
+
+### Capturas del cuestionario del SGA
+
+```text
+ResumenCuestionarioSGA.png
+CuestionarioSGA1.png
+CuestionarioSGA2.png
+CuestionarioSGA3.png
+CuestionarioSGA4.png
+CuestionarioSGA5.png
+CuestionarioSGA6.png
+CuestionarioSGA7.png
+```
+
+### Diagramas UML
+
+```text
+DiagramaClase.png
+diagramaActividad.png
+DiagramaMaquina.png
+DiagrmaMaquinaEstadoCorregido.png
+```
+
+### Evidencias manuscritas
+
+```text
+Hoja1.png
+Hoja2.png
+Hoja3.png
+Hoja4.png
+Hoja5.png
+```
+
+El documento utiliza la siguiente ruta para localizar las imágenes:
+
+```latex
+\graphicspath{{Imagenes_DCF_IR_LATEX/}}
+```
+
+Por este motivo, la carpeta no debe cambiarse de nombre ni moverse a otra ubicación.
+
+El comando personalizado `\scanfig` muestra un recuadro con el mensaje “Imagen no encontrada” cuando falta una imagen utilizada mediante dicho comando. Sin embargo, las imágenes insertadas directamente con `\includegraphics` son necesarias para completar correctamente la compilación.
+
+---
+
+## ✅ Verificación del PDF
+
+Después de compilar el documento, se debe comprobar que el PDF contenga:
+
+* Portada con los datos de identificación.
+* URL completa del repositorio en una sola línea.
+* Captura legible del resumen del cuestionario del SGA.
+* Capturas legibles del intento o evaluación del SGA.
+* Índice del documento.
+* Desarrollo completo de las actividades P1–P10.
+* Marco normativo.
+* Referencias bibliográficas.
+* Anexos con diagramas y evidencias manuscritas.
+* Numeración correcta de páginas, secciones, tablas y figuras.
+* Tablas y diagramas dentro de los márgenes.
+* Citas bibliográficas correctamente generadas.
+* Todas las imágenes visibles.
+* Ningún recuadro de “Imagen no encontrada”.
+
+Las citas deben aparecer como números entre corchetes, por ejemplo:
+
+```text
+[1]
+```
+
+Si aparecen signos de interrogación como `[?]`, se debe repetir el ciclo completo:
+
+```bash
+pdflatex EvaluacionUnidad4.tex
+bibtex EvaluacionUnidad4
+pdflatex EvaluacionUnidad4.tex
+pdflatex EvaluacionUnidad4.tex
+```
+
+---
+
+## 🔍 Verificación del repositorio
+
+El repositorio público se encuentra disponible en:
+
+```text
+https://github.com/ptigasis-Alexander/Pruba_Practica_UND4_Tigasi_Sampedro
+```
+
+También se puede verificar su disponibilidad mediante el siguiente comando:
+
+```bash
+curl -I https://github.com/ptigasis-Alexander/Pruba_Practica_UND4_Tigasi_Sampedro
+```
+
+El servidor debe responder con un código satisfactorio, normalmente:
+
+```text
+HTTP/2 200
+```
+
+
+---
+
+## 📚 Referencias empleadas
+
+El documento contiene referencias relacionadas con:
+
+* ISO/IEC/IEEE 29148:2018.
+* ISO/IEC 25010.
+* Ingeniería de requisitos.
+* Inspección formal de software.
+* SWEBOK.
+* Especificación UML de OMG.
+
+Las referencias completas están disponibles en:
+
+👉 **[referenciasEV4.bib](./referenciasEV4.bib)**
 
 ---
 
 <div align="center">
 
 ## Universidad Técnica Estatal de Quevedo
+
 ### Facultad de Ciencias de la Ingeniería
+
 ### Carrera de Ingeniería de Software
+
 ### Ingeniería de Requisitos (ISR-401)
 
 **Prueba Práctica — Unidad IV**
-**Estudiante:** Tigasi Sampedro Paúl Alexander
+
+**Estudiante: Tigasi Sampedro Paúl Alexander**
 
 ---
+
 ⭐ **Documento elaborado con fines exclusivamente académicos.**
 
 </div>
